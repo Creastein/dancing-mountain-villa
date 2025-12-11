@@ -22,12 +22,25 @@ const Navbar = () => {
     };
 
     const navLinks = [
-        { name: 'Home', href: `${import.meta.env.BASE_URL}` },
-        { name: 'About', href: `${import.meta.env.BASE_URL}#about` },
-        { name: 'Galery', href: `${import.meta.env.BASE_URL}#gallery` },
-        { name: 'Rooms', href: `${import.meta.env.BASE_URL}#rooms` },
-        { name: 'Location', href: `${import.meta.env.BASE_URL}#location` },
+        { name: 'Home', href: '#home' },
+        { name: 'About', href: '#about' },
+        { name: 'Galery', href: '#gallery' },
+        { name: 'Rooms', href: '#rooms' },
+        { name: 'Location', href: '#location' },
     ];
+
+    const handleNavClick = (href) => {
+        setIsMobileMenuOpen(false);
+        
+        // Jika hash berisi #, scroll ke elemen
+        if (href.startsWith('#')) {
+            const id = href.substring(1);
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
 
     return (
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`} style={{
@@ -41,7 +54,7 @@ const Navbar = () => {
         }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 {/* Logo */}
-                <a href={import.meta.env.BASE_URL} style={{ fontSize: '1.5rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)', textDecoration: 'none', color: 'inherit' }}>
+                <a href="#home" onClick={() => handleNavClick('#home')} style={{ fontSize: '1.5rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)', textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
                     Dancing Mountain
                 </a>
 
@@ -51,11 +64,16 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                handleNavClick(link.href);
+                            }}
                             style={{
                                 fontWeight: 500,
                                 position: 'relative',
                                 textDecoration: 'none',
-                                color: 'inherit'
+                                color: 'inherit',
+                                cursor: 'pointer'
                             }}
                             className="nav-link"
                         >
@@ -110,8 +128,11 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            style={{ fontWeight: 500, textDecoration: 'none', color: 'inherit' }}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                handleNavClick(link.href);
+                            }}
+                            style={{ fontWeight: 500, textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
                         >
                             {link.name}
                         </a>

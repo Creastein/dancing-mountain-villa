@@ -51,12 +51,12 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-              <Hero />
-              <About />
-              <Features />
-              <Gallery />
-              <Rooms />
-              <Location />
+              <div id="home"><Hero /></div>
+              <div id="about"><About /></div>
+              <div id="features"><Features /></div>
+              <div id="gallery"><Gallery /></div>
+              <div id="rooms"><Rooms /></div>
+              <div id="location"><Location /></div>
             </>
           } />
           <Route path="/rooms/:id" element={<RoomDetail />} />
