@@ -1,11 +1,47 @@
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-// ... imports
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Features from './components/Features';
+import Gallery from './components/Gallery';
+import Rooms from './components/Rooms';
+import Location from './components/Location';
+import RoomDetail from './components/RoomDetail';
+import Footer from './components/Footer';
+import NotFound from './components/NotFound';
+import './index.css';
 
-// ... ScrollToTop
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 function App() {
-  // ... useEffect for observer
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-in').forEach((el) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'all 0.6s ease-out';
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <Router>
