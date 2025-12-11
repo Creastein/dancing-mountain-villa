@@ -22,11 +22,11 @@ const Navbar = () => {
     };
 
     const navLinks = [
-        { name: 'Home', href: '/' },
-        { name: 'About', href: '/#about' },
-        { name: 'Galery', href: '/#gallery' },
-        { name: 'Rooms', href: '/#rooms' },
-        { name: 'Location', href: '/#location' },
+        { name: 'Home', href: `${import.meta.env.BASE_URL}` },
+        { name: 'About', href: `${import.meta.env.BASE_URL}#about` },
+        { name: 'Galery', href: `${import.meta.env.BASE_URL}#gallery` },
+        { name: 'Rooms', href: `${import.meta.env.BASE_URL}#rooms` },
+        { name: 'Location', href: `${import.meta.env.BASE_URL}#location` },
     ];
 
     return (
@@ -41,7 +41,7 @@ const Navbar = () => {
         }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 {/* Logo */}
-                <a href="/" style={{ fontSize: '1.5rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)', textDecoration: 'none', color: 'inherit' }}>
+                <a href={import.meta.env.BASE_URL} style={{ fontSize: '1.5rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)', textDecoration: 'none', color: 'inherit' }}>
                     Dancing Mountain
                 </a>
 

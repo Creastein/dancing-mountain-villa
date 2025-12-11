@@ -30,7 +30,7 @@ const Gallery = () => {
                             transitionDelay: `${index * 0.05}s`
                         }}>
                             <img
-                                src={`/${image}`}
+                                src={`${import.meta.env.BASE_URL}${image}`}
                                 alt={`Gallery ${index + 1}`}
                                 style={{
                                     width: '100%',

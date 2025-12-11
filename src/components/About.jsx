@@ -28,7 +28,7 @@ const About = () => {
                     boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
                 }}>
                     <img
-                        src="/gallery-2.jpg"
+                        src={`${import.meta.env.BASE_URL}gallery-2.jpg`}
                         alt="Interior Dancing Mountain Villa"
                         style={{
                             width: '100%',
