@@ -6,6 +6,7 @@ import About from './components/About';
 import Features from './components/Features';
 import Gallery from './components/Gallery';
 import Rooms from './components/Rooms';
+import Reviews from './components/Reviews';
 import Location from './components/Location';
 import RoomDetail from './components/RoomDetail';
 import Contact from './components/Contact';
@@ -57,6 +58,7 @@ function App() {
               <div id="features"><Features /></div>
               <div id="gallery"><Gallery /></div>
               <div id="rooms"><Rooms /></div>
+              <div id="reviews"><Reviews /></div>
               <div id="location"><Location /></div>
               <div id="contact"><Contact /></div>
             </>

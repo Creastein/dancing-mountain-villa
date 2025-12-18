@@ -1,12 +1,13 @@
 import React from 'react';
-import { FaWind, FaMountain, FaLeaf } from 'react-icons/fa';
+import { FaWind, FaMountain, FaLeaf, FaUsers } from 'react-icons/fa';
 import { GiBamboo } from 'react-icons/gi';
 
 const features = [
     { title: 'Udara Sejuk', desc: 'Nikmati kesegaran udara pegunungan yang alami.', icon: <FaWind /> },
     { title: 'Arsitektur Bambu', desc: 'Desain unik yang menyatu dengan alam sekitar.', icon: <GiBamboo /> },
     { title: 'Panorama Alam', desc: 'Pemandangan hutan dan gunung yang memukau.', icon: <FaMountain /> },
-    { title: 'Eco Retreat', desc: 'Pengalaman menginap yang ramah lingkungan.', icon: <FaLeaf /> }
+    { title: 'Eco Retreat', desc: 'Pengalaman menginap yang ramah lingkungan.', icon: <FaLeaf /> },
+    { title: 'Family Gathering', desc: 'Tempat sempurna untuk berkumpul bersama keluarga.', icon: <FaUsers /> }
 ];
 
 const Features = () => {
@@ -19,7 +20,8 @@ const Features = () => {
                 <div style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-                    gap: 'var(--spacing-lg)'
+                    gap: 'var(--spacing-lg)',
+                    justifyItems: 'center'
                 }}>
                     {features.map((feature, index) => (
                         <div key={index} className="fade-in-up" style={{
@@ -28,7 +30,14 @@ const Features = () => {
                             backgroundColor: 'white',
                             borderRadius: 'var(--radius-md)',
                             boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
-                            transitionDelay: `${index * 0.1}s`
+                            transitionDelay: `${index * 0.1}s`,
+                            width: '100%',
+                            maxWidth: '280px',
+                            ...(index === features.length - 1 && features.length % 2 !== 0 ? {
+                                gridColumn: '1 / -1',
+                                maxWidth: '280px',
+                                margin: '0 auto'
+                            } : {})
                         }}>
                             <div style={{ fontSize: '3rem', marginBottom: 'var(--spacing-md)', color: 'var(--color-accent)' }}>{feature.icon}</div>
                             <h3 style={{ marginBottom: 'var(--spacing-sm)', fontSize: '1.5rem' }}>{feature.title}</h3>
