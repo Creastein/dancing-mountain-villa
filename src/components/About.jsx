@@ -10,12 +10,12 @@ const About = () => {
                 alignItems: 'center'
             }}>
                 <div className="text-content fade-in-up">
-                    <h2 style={{ color: 'var(--color-primary)', marginBottom: 'var(--spacing-md)' }}>Harmoni Alam & Arsitektur</h2>
-                    <p style={{ marginBottom: 'var(--spacing-md)' }}>
+                    <h2 style={{ color: 'var(--color-primary)', marginBottom: 'var(--spacing-md)', fontSize: '2.5rem' }}>Harmoni Alam & Arsitektur</h2>
+                    <p style={{ marginBottom: 'var(--spacing-md)', fontSize: '1.2rem', lineHeight: '1.8' }}>
                         Dancing Mountain Villa terinspirasi dari konsep hunian bambu yang sederhana namun mendunia.
                         Struktur villa memadukan bambu, batu, dan material lokal agar menyatu dengan lanskap pegunungan.
                     </p>
-                    <p style={{ marginBottom: 'var(--spacing-md)' }}>
+                    <p style={{ marginBottom: 'var(--spacing-md)', fontSize: '1.2rem', lineHeight: '1.8' }}>
                         Atap tinggi dan ventilasi alami menciptakan suasana sejuk khas dataran tinggi.
                         Interior mengusung konsep ruang terbuka tanpa sekat besar, sehingga cahaya alami mengalir
                         dan pemandangan hutan dapat terlihat dari berbagai sudut.

@@ -8,6 +8,7 @@ import Gallery from './components/Gallery';
 import Rooms from './components/Rooms';
 import Location from './components/Location';
 import RoomDetail from './components/RoomDetail';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound';
 import './index.css';
@@ -57,6 +58,7 @@ function App() {
               <div id="gallery"><Gallery /></div>
               <div id="rooms"><Rooms /></div>
               <div id="location"><Location /></div>
+              <div id="contact"><Contact /></div>
             </>
           } />
           <Route path="/rooms/:id" element={<RoomDetail />} />

@@ -5,8 +5,8 @@ const Location = () => {
         <section id="location" className="section" style={{ backgroundColor: 'var(--color-bg)' }}>
             <div className="container">
                 <div className="fade-in-up" style={{ textAlign: 'center', marginBottom: 'var(--spacing-xl)' }}>
-                    <h2 style={{ color: 'var(--color-primary)', marginBottom: 'var(--spacing-sm)' }}>Our Location</h2>
-                    <p style={{ maxWidth: '600px', margin: '0 auto', color: '#666' }}>
+                    <h2 style={{ color: 'var(--color-primary)', marginBottom: 'var(--spacing-sm)', fontSize: '2.5rem' }}>Our Location</h2>
+                    <p style={{ maxWidth: '600px', margin: '0 auto', color: '#666', fontSize: '1.2rem', lineHeight: '1.6' }}>
                         Tersembunyi di lereng gunung yang tenang, namun mudah diakses. Temukan kedamaian Anda di Dancing Mountain Villa.
                     </p>
                 </div>
@@ -46,8 +46,8 @@ const Location = () => {
 
                     {/* Address Details */}
                     <div style={{ padding: 'var(--spacing-lg)' }}>
-                        <h3 style={{ color: 'var(--color-primary)', marginBottom: 'var(--spacing-md)' }}>Visit Us</h3>
-                        <p style={{ marginBottom: 'var(--spacing-md)', fontSize: '1.1rem' }}>
+                        <h3 style={{ color: 'var(--color-primary)', marginBottom: 'var(--spacing-md)', fontSize: '1.8rem' }}>Visit Us</h3>
+                        <p style={{ marginBottom: 'var(--spacing-md)', fontSize: '1.2rem', lineHeight: '1.6' }}>
                             <strong>Dancing Mountain Villa</strong><br />
                             Jl. Flamboyan, Tegalrejo, Kec. Argomulyo, <br />
                             Kota Salatiga,<br />
@@ -55,8 +55,8 @@ const Location = () => {
                         </p>
 
                         <div style={{ marginTop: 'var(--spacing-lg)' }}>
-                            <h4 style={{ color: 'var(--color-secondary)', marginBottom: 'var(--spacing-sm)' }}>Distance from Key Points</h4>
-                            <ul style={{ listStyle: 'none', padding: 0 }}>
+                            <h4 style={{ color: 'var(--color-secondary)', marginBottom: 'var(--spacing-sm)', fontSize: '1.3rem' }}>Distance from Key Points</h4>
+                            <ul style={{ listStyle: 'none', padding: 0, fontSize: '1.1rem' }}>
                                 <li style={{ marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                                     <span>&#9992;</span> 55–70 mins from Ahmad Yani Airport (Semarang)
                                 </li>

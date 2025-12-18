@@ -27,11 +27,12 @@ const Navbar = () => {
         { name: 'Galery', href: '#gallery' },
         { name: 'Rooms', href: '#rooms' },
         { name: 'Location', href: '#location' },
+        { name: 'Contact', href: '#contact' },
     ];
 
     const handleNavClick = (href) => {
         setIsMobileMenuOpen(false);
-        
+
         // Jika hash berisi #, scroll ke elemen
         if (href.startsWith('#')) {
             const id = href.substring(1);
@@ -54,8 +55,12 @@ const Navbar = () => {
         }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 {/* Logo */}
-                <a href="#home" onClick={() => handleNavClick('#home')} style={{ fontSize: '1.5rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)', textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
-                    Dancing Mountain
+                <a href="#home" onClick={() => handleNavClick('#home')} style={{ textDecoration: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+                    <img
+                        src={`${import.meta.env.BASE_URL}${isScrolled ? 'logo1.png' : 'logo.png'}`}
+                        alt="Dancing Mountain Logo"
+                        style={{ height: '50px', objectFit: 'contain' }}
+                    />
                 </a>
 
                 {/* Desktop Menu */}

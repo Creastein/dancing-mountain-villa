@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { rooms } from './Rooms';
+import { rooms } from '../data/rooms';
 
 const RoomDetail = () => {
     const { id } = useParams();

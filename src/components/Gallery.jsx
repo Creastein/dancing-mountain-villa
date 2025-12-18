@@ -13,7 +13,7 @@ const Gallery = () => {
     return (
         <section id="gallery" className="section">
             <div className="container">
-                <h2 className="fade-in-up" style={{ textAlign: 'center', marginBottom: 'var(--spacing-xl)', color: 'var(--color-primary)' }}>
+                <h2 className="fade-in-up" style={{ textAlign: 'center', marginBottom: 'var(--spacing-xl)', color: 'var(--color-primary)', fontSize: '2.5rem' }}>
                     Gallery
                 </h2>
                 <div style={{
