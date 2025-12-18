@@ -17,27 +17,30 @@ const Features = () => {
                 <h2 className="fade-in-up" style={{ textAlign: 'center', marginBottom: 'var(--spacing-xl)', color: 'var(--color-primary)', fontSize: '2.5rem' }}>
                     Fasilitas Unggulan
                 </h2>
-                <div style={{
+                <style>
+                    {`
+                        @media (min-width: 769px) {
+                            .features-grid .feature-card:nth-child(5) {
+                                grid-column: 1 / -1;
+                                max-width: 280px;
+                                margin: 0 auto;
+                            }
+                        }
+                    `}
+                </style>
+                <div className="features-grid" style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-                    gap: 'var(--spacing-lg)',
-                    justifyItems: 'center'
+                    gap: 'var(--spacing-lg)'
                 }}>
                     {features.map((feature, index) => (
-                        <div key={index} className="fade-in-up" style={{
+                        <div key={index} className="feature-card fade-in-up" style={{
                             textAlign: 'center',
                             padding: 'var(--spacing-lg)',
                             backgroundColor: 'white',
                             borderRadius: 'var(--radius-md)',
                             boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
-                            transitionDelay: `${index * 0.1}s`,
-                            width: '100%',
-                            maxWidth: '280px',
-                            ...(index === features.length - 1 && features.length % 2 !== 0 ? {
-                                gridColumn: '1 / -1',
-                                maxWidth: '280px',
-                                margin: '0 auto'
-                            } : {})
+                            transitionDelay: `${index * 0.1}s`
                         }}>
                             <div style={{ fontSize: '3rem', marginBottom: 'var(--spacing-md)', color: 'var(--color-accent)' }}>{feature.icon}</div>
                             <h3 style={{ marginBottom: 'var(--spacing-sm)', fontSize: '1.5rem' }}>{feature.title}</h3>

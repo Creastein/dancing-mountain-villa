@@ -25,7 +25,8 @@ const About = () => {
                     height: '400px',
                     borderRadius: 'var(--radius-lg)',
                     overflow: 'hidden',
-                    boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
+                    boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                    position: 'relative'
                 }}>
                     <img
                         src={`${import.meta.env.BASE_URL}gallery-2.jpg`}
@@ -36,6 +37,16 @@ const About = () => {
                             objectFit: 'cover'
                         }}
                     />
+                    {/* Gradient Overlay */}
+                    <div style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%)',
+                        pointerEvents: 'none'
+                    }}></div>
                 </div>
             </div>
         </section>

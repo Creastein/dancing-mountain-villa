@@ -15,7 +15,7 @@ const RoomDetail = () => {
         return (
             <div className="container" style={{ padding: 'var(--spacing-xl)', textAlign: 'center' }}>
                 <h2>Room not found</h2>
-                <Link to="/" className="btn">Back to Home</Link>
+                <Link to="/#rooms" className="btn">Back to Rooms</Link>
             </div>
         );
     }
@@ -31,8 +31,8 @@ const RoomDetail = () => {
     return (
         <div className="room-detail" style={{ paddingTop: '100px', minHeight: '100vh', backgroundColor: '#fff' }}>
             <div className="container">
-                <Link to="/" style={{ display: 'inline-block', marginBottom: 'var(--spacing-lg)', color: 'var(--color-primary)', textDecoration: 'none' }}>
-                    &larr; Back to Home
+                <Link to="/#rooms" style={{ display: 'inline-block', marginBottom: 'var(--spacing-lg)', color: 'var(--color-primary)', textDecoration: 'none' }}>
+                    &larr; Back to Rooms
                 </Link>
 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--spacing-xl)', alignItems: 'start' }}>

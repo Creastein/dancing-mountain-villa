@@ -28,7 +28,6 @@ const Footer = () => {
                     gap: '2rem',
                     marginBottom: '3rem'
                 }}>
-                    {/* Column 1: Brand */}
                     <div>
                         <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', marginBottom: '1rem' }}>
                             Dancing Mountain Villa
@@ -37,14 +36,6 @@ const Footer = () => {
                             Hunian alami di punggung gunung dengan arsitektur bambu yang memukau.
                             Tempat sempurna untuk menemukan ketenangan.
                         </p>
-                        <div style={{ display: 'flex', gap: '1rem' }}>
-                            <a href="https://www.instagram.com/dancingmountainhouse_salatiga/" target="_blank" rel="noopener noreferrer" style={{ color: 'white', fontSize: '1.5rem', transition: 'opacity 0.3s' }} className="hover-opacity">
-                                <FaInstagram />
-                            </a>
-                            <a href="https://wa.me/085156090617" target="_blank" rel="noopener noreferrer" style={{ color: 'white', fontSize: '1.5rem', transition: 'opacity 0.3s' }} className="hover-opacity">
-                                <FaWhatsapp />
-                            </a>
-                        </div>
                     </div>
 
                     {/* Column 2: Quick Links */}
@@ -72,11 +63,16 @@ const Footer = () => {
                                 <FaMapMarkerAlt style={{ marginTop: '5px', color: 'var(--color-secondary)' }} />
                                 <span style={{ opacity: 0.8 }}>Jl. Flamboyan, Tegalrejo, Argomulyo, Salatiga, Jawa Tengah</span>
                             </li>
-                            {/* Phone number removed as requested */}
                             <li style={{ marginBottom: '1rem', display: 'flex', gap: '10px', alignItems: 'center' }}>
                                 <FaWhatsapp style={{ color: 'var(--color-secondary)' }} />
                                 <a href="https://wa.me/085156090617" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>
                                     Chat on WhatsApp
+                                </a>
+                            </li>
+                            <li style={{ marginBottom: '1rem', display: 'flex', gap: '10px', alignItems: 'center' }}>
+                                <FaInstagram style={{ color: 'var(--color-secondary)' }} />
+                                <a href="https://www.instagram.com/dancingmountainhouse_salatiga/" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>
+                                    @dancingmountainhouse_salatiga
                                 </a>
                             </li>
                             <li style={{ marginBottom: '1rem', display: 'flex', gap: '10px', alignItems: 'center' }}>
