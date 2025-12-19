@@ -3,50 +3,27 @@ import React from 'react';
 const About = () => {
     return (
         <section id="about" className="section container">
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: 'var(--spacing-xl)',
-                alignItems: 'center'
-            }}>
-                <div className="text-content fade-in-up">
-                    <h2 style={{ color: 'var(--color-primary)', marginBottom: 'var(--spacing-md)', fontSize: '2.5rem' }}>Harmoni Alam & Arsitektur</h2>
-                    <p style={{ marginBottom: 'var(--spacing-md)', fontSize: '1.2rem', lineHeight: '1.8' }}>
+            <div className="about-grid">
+                <div className="about-text fade-in-up">
+                    <h2>Harmoni Alam & Arsitektur</h2>
+                    <p>
                         Dancing Mountain Villa terinspirasi dari konsep hunian bambu yang sederhana namun mendunia.
                         Struktur villa memadukan bambu, batu, dan material lokal agar menyatu dengan lanskap pegunungan.
                     </p>
-                    <p style={{ marginBottom: 'var(--spacing-md)', fontSize: '1.2rem', lineHeight: '1.8' }}>
+                    <p>
                         Atap tinggi dan ventilasi alami menciptakan suasana sejuk khas dataran tinggi.
                         Interior mengusung konsep ruang terbuka tanpa sekat besar, sehingga cahaya alami mengalir
                         dan pemandangan hutan dapat terlihat dari berbagai sudut.
                     </p>
                 </div>
-                <div className="image-content fade-in-up stagger-1" style={{
-                    height: '400px',
-                    borderRadius: 'var(--radius-lg)',
-                    overflow: 'hidden',
-                    boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-                    position: 'relative'
-                }}>
+                <div className="about-image-wrapper fade-in-up stagger-1">
                     <img
                         src={`${import.meta.env.BASE_URL}gallery-2.jpg`}
                         alt="Interior Dancing Mountain Villa"
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover'
-                        }}
+                        className="about-image"
                     />
                     {/* Gradient Overlay */}
-                    <div style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                        background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%)',
-                        pointerEvents: 'none'
-                    }}></div>
+                    <div className="about-overlay"></div>
                 </div>
             </div>
         </section>

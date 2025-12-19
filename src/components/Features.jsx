@@ -19,7 +19,7 @@ const Features = () => {
                 </h2>
                 <style>
                     {`
-                        @media (min-width: 769px) {
+                        @media (min-width: 1024px) {
                             .features-grid .feature-card:nth-child(5) {
                                 grid-column: 1 / -1;
                                 max-width: 280px;
