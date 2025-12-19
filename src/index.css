@@ -349,3 +349,12 @@ a {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* Features Layout Override */
+@media (min-width: 1024px) {
+  .features-grid .feature-card:nth-child(5) {
+    grid-column: 1 / -1;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}

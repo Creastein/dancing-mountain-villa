@@ -17,17 +17,6 @@ const Features = () => {
                 <h2 className="fade-in-up" style={{ textAlign: 'center', marginBottom: 'var(--spacing-xl)', color: 'var(--color-primary)', fontSize: '2.5rem' }}>
                     Fasilitas Unggulan
                 </h2>
-                <style>
-                    {`
-                        @media (min-width: 1024px) {
-                            .features-grid .feature-card:nth-child(5) {
-                                grid-column: 1 / -1;
-                                max-width: 280px;
-                                margin: 0 auto;
-                            }
-                        }
-                    `}
-                </style>
                 <div className="features-grid" style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
